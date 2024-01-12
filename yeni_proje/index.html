@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yeni Proje</title>
+    <style>
+      #rastgele {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      #rastgele img {
+        width: 350px;
+        height: 350px;
+        margin: 10px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      @media (max-width: 767px) {
+        #rastgele img {
+          margin-right: auto;
+          margin-left: 6rem;
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Fotoğraf Galerisi</h1>
+    </header>
+    <main>
+      <section id="rastgele"></section>
+      <button id="yenile">Yenile</button>
+    </main>
+
+    <script>
+      var rastgele = document.getElementById("rastgele");
+
+      for (let i = 0; i < 15; i++) {
+        rastgele.innerHTML +=
+          '<img src="https://source.unsplash.com/random/' +
+          (i + 1) +
+          '" alt="photo">';
+      }
+
+      var yenile = document.getElementById("yenile");
+
+      yenile.addEventListener("click", function () {
+        location.reload();
+      });
+    </script>
+  </body>
+</html>

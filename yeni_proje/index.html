@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yeni Proje</title>
     <style>
+      * {
+        background-color: beige;
+      }
       #rastgele {
         display: flex;
         flex-wrap: wrap;
@@ -12,21 +15,34 @@
       }
 
       #rastgele img {
-        width: 350px;
-        height: 350px;
+        width: 400px;
+        height: 400px;
         margin: 10px;
+        border-radius: 0.5rem;
+      }
+
+      button {
+        width: 70px;
+        height: 50px;
+        border-radius: 0.5rem;
+        background-color: tan;
+        font-weight: bold;
+        color: saddlebrown;
+        border-color: antiquewhite;
+        margin-left: 78rem;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        box-shadow: sandybrown;
+      }
+
+      section {
+        display: flex;
       }
 
       h1 {
         text-align: center;
-      }
-
-      @media (max-width: 767px) {
-        #rastgele img {
-          margin-right: auto;
-          margin-left: 6rem;
-          display: block;
-        }
+        color: tan;
+        font-size: 3rem;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
       }
     </style>
   </head>
@@ -34,11 +50,11 @@
     <header>
       <h1>Fotoğraf Galerisi</h1>
     </header>
+
     <main>
-      <section id="rastgele"></section>
       <button id="yenile">Yenile</button>
     </main>
-
+    <section id="rastgele"></section>
     <script>
       var rastgele = document.getElementById("rastgele");
 
